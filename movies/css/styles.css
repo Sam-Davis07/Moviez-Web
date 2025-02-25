@@ -5,8 +5,7 @@
 }
 
 body{
-    background-color: black;
-    overflow: hidden;
+    background-color: white;
 }
 
 .navBar{
@@ -17,7 +16,6 @@ body{
     margin-left: 2rem;
     margin-right: 2rem;
     color: black;
-    z-index: 1;
 }
 
 .navBar2{
@@ -44,21 +42,23 @@ a:hover{
     transform: translate(-50%,-50%);
     width: 90vw;
     height: 600px;
+    background-color: black;
 }
 
 .container .slide .item{
-    height: 300px;
+    height: 100px;
     width: 200px;
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 70%;
     transform: translate(0,50%);
     border-radius: 20px;
     box-shadow: 0 30px 50px black;
-    background-position: 0% 0%;
-    background-size: cover;
+    background-position: 10% 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: inline-block;
-    transition: 0.5s;
-    animation: animate2 1s forwards;
+    transition: .3s;
+    animation: animate2 1s ease-in-out forwards;
 }
 
 .slide .item:nth-child(1),
@@ -72,19 +72,12 @@ a:hover{
 }
 
 .slide .item:nth-child(3){
-    left: 50%;
+    left: 80%;
+    filter: blur(5px);
 }
 
-.slide .item:nth-child(4){
-    left: calc(50% + 220px);
-}
-
-.slide .item:nth-child(5){
-    left: calc(50% + 440px);
-}
-
-.slide .item:nth-child(n + 6){
-    left: calc(50% + 660px);
+.slide .item:nth-child(n + 4){
+    left: 80%;
     opacity: 0;
 }
 
@@ -154,6 +147,7 @@ button:hover{
     border: none;
     height: 2rem;
     width: 2rem;
+    background-color: transparent;
 }
 
 .next button{
@@ -163,10 +157,17 @@ button:hover{
     border: none;
     height: 2rem;
     width: 2rem;
+    background-color: transparent;
 }
 
 .menu{
     cursor: pointer;
+}
+
+.slide2{
+    position: fixed;
+    top: 90%;
+
 }
 
 @keyframes animate{
